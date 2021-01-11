@@ -9,7 +9,7 @@ form.addEventListener('submit',e=>{
     const address = encodeURIComponent(searchField.value);
     messageOne.textContent = 'Loading ... ';
 
-    fetch('http://localhost:3000/weather?address='+address)
+    fetch('/weather?address='+address)
     .then(res=> res.json())
     .then(res=>{
         if(res.error){
